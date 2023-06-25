@@ -1,4 +1,7 @@
 site_name: My Docs
 nav:
   - Home: index.md
+  - Developer:
+    - Tools:
+      - mkdocs: mkdocs.md
 theme: material
