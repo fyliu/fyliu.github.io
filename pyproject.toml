@@ -6,7 +6,7 @@ authors = ["Fang Yi Liu"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.1"
+python = "^3.11.1"
 mkdocs-material = "^9.1.17"
 
 
