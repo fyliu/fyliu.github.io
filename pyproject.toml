@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "notes"
+version = "0.1.0"
+description = "Notes on various subjects"
+authors = ["Fang Yi Liu"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
