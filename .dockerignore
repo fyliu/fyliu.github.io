@@ -1,0 +1,8 @@
+scripts
+pyproject.toml
+poetry.lock
+Dockerfile
+.dockerignore
+.git
+.gitignore
+docker-compose.yml
