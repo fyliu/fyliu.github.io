@@ -18,3 +18,5 @@
   - HfLA Website Docs: '!import https://github.com/hackforla/website-wiki?branch=main'
   - material theme, mkdocs documentation
   - https://github.com/squidfunk/mkdocs-material
+- [ ] build and upload docker image to dockerhub and use that image for development
+- [ ] try docker image on website-wiki to see if it works.
