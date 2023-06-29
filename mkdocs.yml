@@ -10,6 +10,7 @@ nav:
   - Developer:
     - Guides ideas: guides-ideas.md
     - Tools:
+      - git: git.md
       - mkdocs: mkdocs.md
     #- MkDocs: [mkdocs/docs/index]
 
