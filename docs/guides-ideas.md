@@ -10,8 +10,9 @@
 - [x] set up mkdocs repo
 - [x] add tilde pymdown extension for strikethrough text: https://yakworks.github.io/docmark/extensions/pymdown/ https://squidfunk.github.io/mkdocs-material/reference/formatting/
 - [x] docker file for mkdocs project
-- [ ] local development using docker to run mkdocs
+- [x] local development using docker to run mkdocs
   - https://squidfunk.github.io/mkdocs-material/publishing-your-site/#material-for-mkdocs_1
+- [ ] github workflow to build gh-pages docs
 - [ ] git diagram example
 - [ ] multi repo mkdocs with CTJ and Website Wiki
   - Fang: it doesn't work correctly. All the links are broken. It imports the nav from the remote repos and converts the links to <remote>/<docname>, but the imported docs are stores in <remote>/docs/<docname>
