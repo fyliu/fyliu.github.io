@@ -29,13 +29,13 @@ edit_uri: edit/main/docs/
 
 plugins:
   - search
-  - multirepo:
-      cleanup: false
-      keep_docs_dir: false
-      nav_repos:
-        - name: mkdocs
-          import_url: https://github.com/mkdocs/mkdocs/
-          imports: [mkdocs/docs/index.md]
+#  - multirepo:
+#      cleanup: false
+#      keep_docs_dir: false
+#      nav_repos:
+#        - name: mkdocs
+#          import_url: https://github.com/mkdocs/mkdocs/
+#          imports: [mkdocs/docs/index.md]
 
 markdown_extensions:
   - abbr
