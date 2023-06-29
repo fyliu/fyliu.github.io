@@ -132,3 +132,13 @@ poetry add mkdocs-multirepo-plugin
 # add the plugin in mkdocs.yml
 # import the other repos in mkdocs.yml
 ```
+
+### Export requirements
+
+We need to export the requirements whenever we add a new package, so that the docker setup can know to use it.
+
+```bash
+poetry export -f requirements.txt --without-hashes > requirements.txt --with docs # (1)!
+```
+
+1. This is also contained in a script `export_requirements.sh` in the scripts directory

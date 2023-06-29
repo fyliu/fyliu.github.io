@@ -1,6 +1,3 @@
 #!/bin/bash
 
-# example:
-# ./scripts/export_requirements.sh --with docs
-
-poetry export -f requirements.txt --without-hashes > requirements.txt "$@"
+poetry export -f requirements.txt --without-hashes > requirements.txt --with docs
