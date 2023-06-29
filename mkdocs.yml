@@ -11,6 +11,7 @@ nav:
     - Guides ideas: guides-ideas.md
     - Tools:
       - mkdocs: mkdocs.md
+    #- MkDocs: [mkdocs/docs/index]
 
 theme:
   name: material
@@ -28,12 +29,13 @@ edit_uri: edit/main/docs/
 
 plugins:
   - search
-  #- multirepo:
-  #    cleanup: true
-  #    keep_docs_dir: false
-      #nav_repos:
-      #  - name: mkdocs
-      #    import_url: https://github.com/mkdocs/mkdocs/
+  - multirepo:
+      cleanup: false
+      keep_docs_dir: false
+      nav_repos:
+        - name: mkdocs
+          import_url: https://github.com/mkdocs/mkdocs/
+          imports: [mkdocs/docs/index.md]
 
 markdown_extensions:
   - abbr
