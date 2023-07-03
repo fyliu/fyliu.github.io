@@ -50,6 +50,26 @@ It creates documentation that's pleasing to read and easy to maintain.
 
         That's what this box is!
 
+## Hackforla project template
+
+### Usage
+
+When we create a new project from the template, mkdocs should already be usable.
+
+#### Components
+
+1. Starter docs to guide the creation of new pages.
+1. Github workflow setup to auto-deploy the documentation.
+1. Docker setup to run mkdocs locally without having to do the multi-step setup
+1. [optional] A docs branch which allows someone to make edits to files in the docs directory and a daily automation will merge in the changes to the main branch.
+
+??? "How we set it up"
+
+    ##### Docker image
+
+    There's a docker image that contains the standard mkdocs setup we use at Hack for LA. It contains all the plugins that some project is using. If your project requires other ones, Either request one to be added to the image or create your own dockerfile for installing
+
+
 ## How to use it
 
 === "Docker"
@@ -149,11 +169,13 @@ It creates documentation that's pleasing to read and easy to maintain.
 
     ### Poetry project
     ```bash
-    poetry init —name notes —description “Notes on various subject” —author “Fang Yi Liu”
-    # use python version 3.11.1
-    # don’t define dependencies
-    git commit -m”create project for notes”
+    poetry init —name docs —description “Project Documentation” # (1)!
+    # use a modern stable python like version 3.11.1
+    # don’t define dependencies interactively
+    git commit -m”create project for documentation”
     ```
+
+    1. We chose poetry because it performs multiple useful functions such as creating the virtual environment and dependency management. It will be easy to update to the latest versions of dependencies.
 
     ### Mkdocs package
     ```bash
