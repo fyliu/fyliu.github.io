@@ -7,7 +7,7 @@ WORKDIR /app
 # install system dependencies
 RUN apt-get update \
   && apt-get --no-install-recommends install -y \
-  git \
+  git # mkdocs-multirepo-plugin requires this \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
