@@ -15,6 +15,18 @@ files = [
 ]
 
 [[package]]
+name = "bracex"
+version = "2.3.post1"
+description = "Bash style brace expander."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "bracex-2.3.post1-py3-none-any.whl", hash = "sha256:351b7f20d56fb9ea91f9b9e9e7664db466eb234188c175fd943f8f755c807e73"},
+    {file = "bracex-2.3.post1.tar.gz", hash = "sha256:e7b23fc8b2cd06d3dec0692baabecb249dda94e06a617901ff03a6c56fd71693"},
+]
+
+[[package]]
 name = "certifi"
 version = "2023.5.7"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -316,6 +328,23 @@ i18n = ["babel (>=2.9.0)"]
 min-versions = ["babel (==2.9.0)", "click (==7.0)", "colorama (==0.4)", "ghp-import (==1.0)", "importlib-metadata (==4.3)", "jinja2 (==2.11.1)", "markdown (==3.2.1)", "markupsafe (==2.0.1)", "mergedeep (==1.3.4)", "packaging (==20.5)", "pyyaml (==5.1)", "pyyaml-env-tag (==0.1)", "typing-extensions (==3.10)", "watchdog (==2.0)"]
 
 [[package]]
+name = "mkdocs-awesome-pages-plugin"
+version = "2.9.1"
+description = "An MkDocs plugin that simplifies configuring page titles and their order"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "mkdocs_awesome_pages_plugin-2.9.1-py3-none-any.whl", hash = "sha256:be65e36444f5d991f87a90dae37de64e932562f99e362078724c27124834b90a"},
+    {file = "mkdocs_awesome_pages_plugin-2.9.1.tar.gz", hash = "sha256:faf5241365f94c1f65ef3cad7ea9d6f0e7a436be7f06013c79c4045db0b2eafc"},
+]
+
+[package.dependencies]
+mkdocs = ">=1"
+natsort = ">=8.1.0"
+wcmatch = ">=7"
+
+[[package]]
 name = "mkdocs-material"
 version = "9.1.17"
 description = "Documentation that simply works"
@@ -380,6 +409,22 @@ files = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
     {file = "mypy_extensions-1.0.0.tar.gz", hash = "sha256:75dbf8955dc00442a438fc4d0666508a9a97b6bd41aa2f0ffe9d2f2725af0782"},
 ]
+
+[[package]]
+name = "natsort"
+version = "8.4.0"
+description = "Simple yet flexible natural sorting in Python."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "natsort-8.4.0-py3-none-any.whl", hash = "sha256:4732914fb471f56b5cce04d7bae6f164a592c7712e1c85f9ef585e197299521c"},
+    {file = "natsort-8.4.0.tar.gz", hash = "sha256:45312c4a0e5507593da193dedd04abb1469253b601ecaf63445ad80f0a1ea581"},
+]
+
+[package.extras]
+fast = ["fastnumbers (>=2.0.0)"]
+icu = ["PyICU (>=1.0.0)"]
 
 [[package]]
 name = "packaging"
@@ -752,7 +797,22 @@ files = [
 [package.extras]
 watchmedo = ["PyYAML (>=3.10)"]
 
+[[package]]
+name = "wcmatch"
+version = "8.4.1"
+description = "Wildcard/glob file name matcher."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "wcmatch-8.4.1-py3-none-any.whl", hash = "sha256:3476cd107aba7b25ba1d59406938a47dc7eec6cfd0ad09ff77193f21a964dee7"},
+    {file = "wcmatch-8.4.1.tar.gz", hash = "sha256:b1f042a899ea4c458b7321da1b5e3331e3e0ec781583434de1301946ceadb943"},
+]
+
+[package.dependencies]
+bracex = ">=2.1.1"
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.1"
-content-hash = "6441ad820af8526639910b170244a4422314dbb192420c2d43e2e821400c73d3"
+content-hash = "e87f83805a441fd76ab9f8138cbc71cea6d368762b8e925d3e3feb80313de42b"
