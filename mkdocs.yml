@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Fang's Notes
 
 nav:
   - Home: index.md
@@ -8,10 +8,10 @@ nav:
   #- MkDocs Material: '!import https://github.com/squidfunk/mkdocs-material?keep_docs_dir=False'
   # - MkdocStrings: '!import https://github.com/mkdocstrings/mkdocstrings?keep_docs_dir=False&docs_dir=docs'
   - Developer:
-    - Guides ideas: guides-ideas.md
-    - Tools:
-      - git: git.md
-      - mkdocs: mkdocs.md
+      - Guides ideas: guides-ideas.md
+      - Tools:
+          - git: git.md
+          - mkdocs: mkdocs.md
     #- MkDocs: [mkdocs/docs/index]
 
 theme:

@@ -52,23 +52,80 @@ It creates documentation that's pleasing to read and easy to maintain.
 
 ## Hackforla project template
 
-### Usage
-
-When we create a new project from the template, mkdocs should already be usable.
-
 #### Components
 
 1. Starter docs to guide the creation of new pages.
 1. Github workflow setup to auto-deploy the documentation.
-1. Docker setup to run mkdocs locally without having to do the multi-step setup
+1. Docker setup to run mkdocs without having to install it locally
 1. [optional] A docs branch which allows someone to make edits to files in the docs directory and a daily automation will merge in the changes to the main branch.
 
-??? "How we set it up"
+### Usage
 
-    ##### Docker image
+When we create a new project from the template, mkdocs should already be usable. The github workflow will run automatically and create a github pages site at `http://hackforla.github.io/<project name>`
 
-    There's a docker image that contains the standard mkdocs setup we use at Hack for LA. It contains all the plugins that some project is using. If your project requires other ones, Either request one to be added to the image or create your own dockerfile for installing
+#### Local editing
 
+Run the mkdocs server with the following command
+
+``` bash
+docker-compose -f docker-compse.mkdocs.yml up
+```
+
+++ctrl+c++ to exit.
+
+??? info "How we set it up"
+
+    ### Github workflow
+
+    We're using essentially the same workflow described [here](https://squidfunk.github.io/mkdocs-material/publishing-your-site/).
+
+    This builds and publishes the docs on push to the main branch.
+
+    ``` yaml title=".github/workflow/ci.yml"
+    name: ci
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: write # (1)!
+        steps:
+          - uses: actions/checkout@v2
+          - uses: actions/setup-python@v2
+            with:
+              python-version: 3.x
+          - run: pip install mkdocs-material
+          - run: mkdocs gh-deploy --force
+    ```
+
+    1. Request repo commit permission inside the deploy job.
+
+    ### Docker image
+
+    There's a docker image that contains the standard mkdocs setup we use at Hack for LA. It contains all the plugins that projects are using. If your project requires other ones, Either request one to be added to the image or create your own dockerfile for installing them.
+
+    ??? note "Temporarily, the image is in a personal dockerhub repo `fyliu/local-mkdocs:testing` until it can be moved under a hackforla account. The source repo for the image is [here](https://github.com/fyliu/fyliu.github.io)"
+
+    Projects can use the image by creating a docker-compose.yml file like this
+
+    ``` yaml title="docker-compose.mkdocs.yml"
+    version: "3.9"
+    services:
+      mkdocs:
+        image: fyliu/local-mkdocs:testing
+        container_name: mkdocs # (1)!
+        command: mkdocs serve -a "0.0.0.0:8000"
+        ports:
+          - "8000:8000" # (2)!
+        volumes:
+          - .:/app
+    ```
+
+    1. If the name conflicts with another container, we suggest customizing this with your project name, like `mkdocs-engineering` or `mkdocs-website`.
+    1. If port 8000 is already in use, change this to something like 8001:8000 to expose it on port 8001.
 
 ## How to use it
 
