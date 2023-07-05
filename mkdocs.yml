@@ -4,7 +4,7 @@ nav:
   - Home: index.md
   #- HfLA Website Docs: '!import https://github.com/hackforla/website-wiki?branch=main'
   #- CivicTechJobs Docs: '!import https://github.com/hackforla/CivicTechJobs?branch=main&docs_dir=mkdocs&config=mkdocs/mkdocs.yml'
-  #- MkDocs: '!import https://github.com/mkdocs/mkdocs/?keep_docs_dir=True'
+  - MkDocs: '!import https://github.com/mkdocs/mkdocs/?keep_docs_dir=False'
   #- MkDocs Material: '!import https://github.com/squidfunk/mkdocs-material?keep_docs_dir=False'
   # - MkdocStrings: '!import https://github.com/mkdocstrings/mkdocstrings?keep_docs_dir=False&docs_dir=docs'
   - Developer:
@@ -29,9 +29,9 @@ edit_uri: edit/main/docs/
 
 plugins:
   - search
-#  - multirepo:
-#      cleanup: false
-#      keep_docs_dir: false
+  - multirepo:
+      cleanup: false
+      keep_docs_dir: false
 #      nav_repos:
 #        - name: mkdocs
 #          import_url: https://github.com/mkdocs/mkdocs/
