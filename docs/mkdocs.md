@@ -52,18 +52,35 @@ It creates documentation that's pleasing to read and easy to maintain.
 
 ## Hackforla project template
 
+???+ abstract "Todo"
+
+    - [x] how to extend to install other plugins in ci.yml and Dockerfile
+    - [ ] multirepo plugin
+    - [ ] optimize Dockerfile
+    - [ ] [people depot] auto merge docs branch with gh-actions
+
 #### Components
 
 1. Starter docs to guide the creation of new pages.
 1. Github workflow setup to auto-deploy the documentation.
 1. Docker setup to run mkdocs without having to install it locally
-1. [optional] A docs branch which allows someone to make edits to files in the docs directory and a daily automation will merge in the changes to the main branch.
 
 ### Usage
 
-When we create a new project from the template, mkdocs should already be usable. The github workflow will run automatically and create a github pages site at `http://hackforla.github.io/<project name>`
+=== "New project"
 
-#### Local editing
+    When we create a new project from the template, mkdocs should already be usable. The github workflow will run automatically and create a github pages site at `http://hackforla.github.io/<project name>`
+
+=== "Existing project"
+
+    To add mkdocs to existing repos. You'll need to copy these files
+
+    ```
+    .github/workflows/ci.yml
+    docker-compose.mkdocs.yml
+    ```
+
+#### Working on docs locally
 
 Run the mkdocs server with the following command
 
@@ -72,6 +89,57 @@ docker-compose -f docker-compse.mkdocs.yml up
 ```
 
 ++ctrl+c++ to exit.
+
+### Extension
+
+If your project needs other plugins that's not in the image, here's a way to extend the image on your own.
+
+In ci.yml, add the instruction to install the extnesion
+
+``` yaml title=".github/workflows/ci.yml" hl_lines="3"
+      - run: pip install \
+          mkdocs-material \
+          mkdocs-awesome-pages-plugin \
+          ...
+```
+
+Add your own Dockerfile to install the plugin for local usage
+
+```docker title="Dockerfile.mkdocs"
+# base image
+FROM fyliu/local-mkdocs:testing
+
+# set work directory
+WORKDIR /app
+
+# install system dependencies
+RUN apt-get update \
+  && apt-get --no-install-recommends install -y \
+  git # mkdocs-multirepo-plugin requires this \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+# install dependencies
+# (1)!
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# copy project
+COPY . .
+```
+
+1. Presumably, the extra plugins are specified in requirement.txt to be installed
+
+Modify the docker-compose file to use the new Dockerfile
+
+``` yaml title="docker-compose.mkdocs.yml" hl_lines="2-5"
+  mkdocs:
+    #image: fyliu/local-mkdocs:testing
+    build:
+      context: .
+      dockerfile: Dockerfile.mkdocs
+    container_name: mkdocs
+```
 
 ??? info "How we set it up"
 

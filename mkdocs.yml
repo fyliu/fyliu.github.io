@@ -20,7 +20,6 @@ theme:
     - content.action.edit
     - content.code.annotate
     - content.code.copy
-    - content.code.select
     - navigation.indexes
     - navigation.sections
 
@@ -53,6 +52,7 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.keys
   - pymdownx.mark
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
