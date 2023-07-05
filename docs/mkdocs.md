@@ -56,8 +56,8 @@ It creates documentation that's pleasing to read and easy to maintain.
 
     - [x] how to extend to install other plugins in ci.yml and Dockerfile
     - [ ] multirepo plugin
-    - [ ] optimize Dockerfile
-    - [ ] [people depot] auto merge docs branch with gh-actions
+    - [ ] ~~optimize Dockerfile~~
+    - [ ] ~~[people depot] auto merge docs branch with gh-actions~~
 
 #### Components
 
@@ -73,7 +73,7 @@ It creates documentation that's pleasing to read and easy to maintain.
 
 === "Existing project"
 
-    To add mkdocs to existing repos. You'll need to copy these files
+    To add mkdocs to existing repos. You'll need to copy these files into your project
 
     ```
     .github/workflows/ci.yml
@@ -82,17 +82,18 @@ It creates documentation that's pleasing to read and easy to maintain.
 
 #### Working on docs locally
 
-Run the mkdocs server with the following command
+1. Run the mkdocs server with the following command
 
-``` bash
-docker-compose -f docker-compse.mkdocs.yml up
-```
+    ``` bash
+    docker-compose -f docker-compse.mkdocs.yml up
+    ```
 
-++ctrl+c++ to exit.
+2. Work on the docs.
+3. ++ctrl+c++ to exit.
 
 ### Extension
 
-If your project needs other plugins that's not in the image, here's a way to extend the image on your own.
+If your project wants to try other plugins that's not in the hackforla image, here's a way to extend the image on your own before asking to add it to the hackforla image.
 
 In ci.yml, add the instruction to install the extnesion
 
@@ -195,9 +196,12 @@ Modify the docker-compose file to use the new Dockerfile
     1. If the name conflicts with another container, we suggest customizing this with your project name, like `mkdocs-engineering` or `mkdocs-website`.
     1. If port 8000 is already in use, change this to something like 8001:8000 to expose it on port 8001.
 
-## How to use it
+## Mkdocs docker image repo
+### How to use it
 
 === "Docker"
+
+    #### Docker
 
     1. Build the image
 
@@ -221,7 +225,7 @@ Modify the docker-compose file to use the new Dockerfile
 
 === "Local install (pip)"
 
-    ### Local Install (pip)
+    #### Local Install (pip)
 
     python should be version 3
 
@@ -247,7 +251,7 @@ Modify the docker-compose file to use the new Dockerfile
 
 === "Local install (poetry)"
 
-    ### Local Install (poetry)
+    #### Local Install (poetry)
 
     python poetry must be installed in the local system
 
@@ -280,11 +284,11 @@ Modify the docker-compose file to use the new Dockerfile
 
 ??? info "How we set it up"
 
-    ## Setup from scratch
+    ### Setup from scratch
 
     Here's the recommended setup, from our experience setting it up.
 
-    ### Project directory
+    #### Project directory
 
     ```bash
     mkdir mkdocs-notes && cd $_
@@ -292,7 +296,7 @@ Modify the docker-compose file to use the new Dockerfile
     git commit —allow-empty -m”Initial commit”
     ```
 
-    ### Poetry project
+    #### Poetry project
     ```bash
     poetry init —name docs —description “Project Documentation” # (1)!
     # use a modern stable python like version 3.11.1
@@ -302,7 +306,7 @@ Modify the docker-compose file to use the new Dockerfile
 
     1. We chose poetry because it performs multiple useful functions such as creating the virtual environment and dependency management. It will be easy to update to the latest versions of dependencies.
 
-    ### Mkdocs package
+    #### Mkdocs package
     ```bash
     poetry shell # this goes into the poetry virtual environment
     poetry add mkdocs —group docs
@@ -311,14 +315,14 @@ Modify the docker-compose file to use the new Dockerfile
     git ci -m”add mkdocs package”
     ```
 
-    ### Mkdocs project
+    #### Mkdocs project
     ```bash
     mkdocs new . # creates mkdocs project in current directory
     git add -A # add all untracked files
     git ci -m”create mkdocs project”
     ```
 
-    ### Local dev server
+    #### Local dev server
 
     ```bash
     mkdocs serve —dev-addr 0.0.0.0:8001 # (1)!
@@ -327,21 +331,21 @@ Modify the docker-compose file to use the new Dockerfile
     1. Start the dev server locally on any address on port 8001.
     This is useful for development from a different local network computer, where the default localhost won’t work
 
-    ### Material theme
+    #### Material theme
     ```bash
     poetry add mkdocs-material
     cat "theme: material" >> mkdocs.yml
     git ci -a -m"setup material theme for mkdocs"
     ```
 
-    ### ~~Multirepo~~ (not yet working)
+    #### ~~Multirepo~~ (not yet working)
     ```bash
     poetry add mkdocs-multirepo-plugin
     # add the plugin in mkdocs.yml
     # import the other repos in mkdocs.yml
     ```
 
-    ### Export requirements
+    #### Export requirements
 
     We need to export the requirements whenever we add a new package, so that the docker setup and pip users can know to use it.
 
@@ -352,12 +356,12 @@ Modify the docker-compose file to use the new Dockerfile
 
     1. This is also contained in a script `export_requirements.sh` in the scripts directory
 
-    ### Deployment to Github Pages
+    #### Deployment to Github Pages
 
     We closely followed [this guide](https://squidfunk.github.io/mkdocs-material/publishing-your-site/).
     This setup creates a gh-pages branch to store the latest docs. Make the necessary configurations in the Github repo settings as necessary under Pages.
 
-    ### Docker setup
+    #### Docker setup
 
     We modified the dockerfile and docker-compose files from People Depot to install and serve mkdocs locally.
     The files are `docker-compose.yml` and `Dockerfile`.
