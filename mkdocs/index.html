@@ -1,0 +1,1277 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../git/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>mkdocs - Fang's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Fang&#39;s Notes" class="md-header__button md-logo" aria-label="Fang's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fang's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              mkdocs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fyliu/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fyliu/notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fang&#39;s Notes" class="md-nav__button md-logo" aria-label="Fang's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Fang's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fyliu/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fyliu/notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Developer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides-ideas/" class="md-nav__link">
+        Guides ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        mkdocs
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-use-it" class="md-nav__link">
+    Why we use it
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackforla-project-template" class="md-nav__link">
+    Hackforla project template
+  </a>
+  
+    <nav class="md-nav" aria-label="Hackforla project template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-on-docs-locally" class="md-nav__link">
+    Working on docs locally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension" class="md-nav__link">
+    Extension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-workflow" class="md-nav__link">
+    Github workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-image" class="md-nav__link">
+    Docker image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-docker-image-repo" class="md-nav__link">
+    Mkdocs docker image repo
+  </a>
+  
+    <nav class="md-nav" aria-label="Mkdocs docker image repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-it" class="md-nav__link">
+    How to use it
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-install-pip" class="md-nav__link">
+    Local Install (pip)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-install-poetry" class="md-nav__link">
+    Local Install (poetry)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-from-scratch" class="md-nav__link">
+    Setup from scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup from scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-directory" class="md-nav__link">
+    Project directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry-project" class="md-nav__link">
+    Poetry project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-package" class="md-nav__link">
+    Mkdocs package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-project" class="md-nav__link">
+    Mkdocs project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-dev-server" class="md-nav__link">
+    Local dev server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-theme" class="md-nav__link">
+    Material theme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multirepo-not-yet-working" class="md-nav__link">
+    Multirepo (not yet working)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-requirements" class="md-nav__link">
+    Export requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-to-github-pages" class="md-nav__link">
+    Deployment to Github Pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-setup" class="md-nav__link">
+    Docker setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-use-it" class="md-nav__link">
+    Why we use it
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackforla-project-template" class="md-nav__link">
+    Hackforla project template
+  </a>
+  
+    <nav class="md-nav" aria-label="Hackforla project template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-on-docs-locally" class="md-nav__link">
+    Working on docs locally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension" class="md-nav__link">
+    Extension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-workflow" class="md-nav__link">
+    Github workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-image" class="md-nav__link">
+    Docker image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-docker-image-repo" class="md-nav__link">
+    Mkdocs docker image repo
+  </a>
+  
+    <nav class="md-nav" aria-label="Mkdocs docker image repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-it" class="md-nav__link">
+    How to use it
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-install-pip" class="md-nav__link">
+    Local Install (pip)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-install-poetry" class="md-nav__link">
+    Local Install (poetry)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-from-scratch" class="md-nav__link">
+    Setup from scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup from scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-directory" class="md-nav__link">
+    Project directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry-project" class="md-nav__link">
+    Poetry project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-package" class="md-nav__link">
+    Mkdocs package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-project" class="md-nav__link">
+    Mkdocs project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-dev-server" class="md-nav__link">
+    Local dev server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-theme" class="md-nav__link">
+    Material theme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multirepo-not-yet-working" class="md-nav__link">
+    Multirepo (not yet working)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-requirements" class="md-nav__link">
+    Export requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-to-github-pages" class="md-nav__link">
+    Deployment to Github Pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-setup" class="md-nav__link">
+    Docker setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/fyliu/notes/edit/main/docs/mkdocs.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="mkdocs">Mkdocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-it">What is it<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h3>
+<p>Mkdocs is a documentation generator for projects, which converts markdown to html.</p>
+<h3 id="why-we-use-it">Why we use it<a class="headerlink" href="#why-we-use-it" title="Permanent link">&para;</a></h3>
+<p>It creates documentation that's pleasing to read and easy to maintain.</p>
+<details class="info" open="open">
+<summary>Here's a list of features we use</summary>
+<details class="example">
+<summary>Dead link checker</summary>
+<p>Github wiki doesn't check for broken links.</p>
+</details>
+<details class="example">
+<summary>Search function</summary>
+<p>Github wiki is not searcheable.</p>
+</details>
+<details class="example">
+<summary><a href="https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/">Tabbed blocks</a></summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>linux-specific content</p>
+</div>
+<div class="tabbed-block">
+<p>mac-specific content</p>
+</div>
+</div>
+</div>
+</details>
+<details class="example">
+<summary>Site table of contents</summary>
+<p>See the contents of the site in the left sidebar.</p>
+</details>
+<details class="example">
+<summary>Per-page table of contents</summary>
+<p>See the contents of the current page in the right sidebar.</p>
+</details>
+<details class="example">
+<summary>Code and text annotations</summary>
+<div class="highlight"><pre><span></span><code>Click<span class="w"> </span>the<span class="w"> </span>plus<span class="w"> </span>sign<span class="w"> </span>--&gt;<span class="w"> </span><span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li>This is an explanation text</li>
+</ol>
+</details>
+<details class="example">
+<summary><a href="https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/details/">Expandable text blocks</a></summary>
+<p>That's what this box is!</p>
+</details>
+</details>
+<h2 id="hackforla-project-template">Hackforla project template<a class="headerlink" href="#hackforla-project-template" title="Permanent link">&para;</a></h2>
+<details class="abstract" open="open">
+<summary>Todo</summary>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> how to extend to install other plugins in ci.yml and Dockerfile</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> multirepo plugin</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <del>optimize Dockerfile</del></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <del>[people depot] auto merge docs branch with gh-actions</del></li>
+</ul>
+</details>
+<h3 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Starter docs to guide the creation of new pages.</li>
+<li>Github workflow setup to auto-deploy the documentation.</li>
+<li>Docker setup to run mkdocs without having to install it locally</li>
+</ol>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">New project</label><label for="__tabbed_2_2">Existing project</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>When we create a new project from the template, mkdocs should already be usable. The github workflow will run automatically and create a github pages site at <code>http://hackforla.github.io/&lt;project name&gt;</code></p>
+<ol>
+<li>Click on <span class="keys"><kbd>Use this template</kbd></span></li>
+<li>"Create a new repository"</li>
+<li>Be sure to set these options:<ol>
+<li>Select "Public" repo type, which allows gh-pages to work for non-paying repos.</li>
+<li>Check the "Include all branches" box, which copies the gh-pages branch which holds the generated html pages.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>To add mkdocs to existing repos. You'll need to copy these files into your project</p>
+<div class="highlight"><pre><span></span><code>.github/workflows/ci.yml
+docker-compose.mkdocs.yml
+</code></pre></div>
+<p>You'll also need to create a new mkdocs project</p>
+<ol>
+<li>Use the docker image to create the new project</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.mkdocs.yml<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>.<span class="w"> </span><span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li>docker-compose run executes a command from a new docker image container. In this case, inside the mkdocs container, execute <code>mkdocs new .</code> (note the period for the current directory).</li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="working-on-docs-locally">Working on docs locally<a class="headerlink" href="#working-on-docs-locally" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Run the mkdocs server from the container</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compse.mkdocs.yml<span class="w"> </span>up
+</code></pre></div>
+</li>
+<li>
+<p>Open a browser to <code>http://localhost:8000/</code> to see the documentation locally</p>
+</li>
+<li>
+<p>Modify the files in the docs directory. The site will auto-update when the files are saved.</p>
+</li>
+<li>
+<p>Quit</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> to quit the local server and stop the container</p>
+</li>
+</ol>
+<h3 id="extension">Extension<a class="headerlink" href="#extension" title="Permanent link">&para;</a></h3>
+<p>If your project wants to try other plugins not in the hackforla image, here's a way to extend the image on your own before asking to add it to the hackforla image.</p>
+<details class="info">
+<summary>The hackforla image is built from <a href="https://github.com/hackforla/ghpages-docker">hackforla/mkdocs-docker</a>, where the mkdocs plugins are listed in <code>pyproject.toml</code>.</summary>
+</details>
+<ol>
+<li>
+<p>In ci.yml, add the instruction to install the extnesion</p>
+<div class="highlight"><span class="filename">.github/workflows/ci.yml</span><pre><span></span><code><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install \</span>
+<span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-material \</span>
+<span class="hll"><span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-awesome-pages-plugin \</span>
+</span><span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add your own Dockerfile to install the plugin for local usage</p>
+<div class="highlight"><span class="filename">Dockerfile.mkdocs</span><pre><span></span><code><span class="c"># base image</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">fyliu/local-mkdocs:testing</span>
+
+<span class="c"># set work directory</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># install system dependencies</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>--no-install-recommends<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>git<span class="w"> </span><span class="c1"># mkdocs-multirepo-plugin requires this \</span>
+<span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>clean<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+
+<span class="c"># install dependencies</span>
+<span class="c"># (1)!</span>
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># copy project</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+</code></pre></div>
+<ol>
+<li>Presumably, the extra plugins are specified in requirement.txt to be installed</li>
+</ol>
+</li>
+<li>
+<p>Modify the docker-compose file to use the new Dockerfile</p>
+<div class="highlight"><span class="filename">docker-compose.mkdocs.yml</span><pre><span></span><code><span class="nt">mkdocs</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="c1">#image: fyliu/local-mkdocs:testing</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile.mkdocs</span>
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
+</code></pre></div>
+</li>
+</ol>
+<details class="info">
+<summary>How we set it up</summary>
+<h3 id="github-workflow">Github workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h3>
+<p>We're using essentially the same workflow described <a href="https://squidfunk.github.io/mkdocs-material/publishing-your-site/">here</a>.</p>
+<p>This builds and publishes the docs on push to the main branch.</p>
+<div class="highlight"><span class="filename">.github/workflow/ci.yml</span><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span>
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span><span class="w"> </span><span class="c1"># (1)!</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+</code></pre></div>
+<ol>
+<li>Request repo commit permission inside the deploy job.</li>
+</ol>
+<h3 id="docker-image">Docker image<a class="headerlink" href="#docker-image" title="Permanent link">&para;</a></h3>
+<p>There's a docker image that contains the standard mkdocs setup we use at Hack for LA. It contains all the plugins that projects are using. If your project requires other ones, Either request one to be added to the image or create your own dockerfile for installing them.</p>
+<details class="note">
+<summary>Temporarily, the image is in a personal dockerhub repo <code>fyliu/local-mkdocs:testing</code> until it can be moved under a hackforla account. The source repo for the image is <a href="https://github.com/fyliu/fyliu.github.io">here</a></summary>
+</details>
+<p>Projects can use the image by creating a docker-compose.yml file like this</p>
+<div class="highlight"><span class="filename">docker-compose.mkdocs.yml</span><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mkdocs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fyliu/local-mkdocs:testing</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs</span><span class="w"> </span><span class="c1"># (1)!</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs serve -a &quot;0.0.0.0:8000&quot;</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:8000&quot;</span><span class="w"> </span><span class="c1"># (2)!</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.:/app</span>
+</code></pre></div>
+<ol>
+<li>If the name conflicts with another container, we suggest customizing this with your project name, like <code>mkdocs-engineering</code> or <code>mkdocs-website</code>.</li>
+<li>If port 8000 is already in use, change this to something like 8001:8000 to expose it on port 8001.</li>
+</ol>
+</details>
+<h2 id="mkdocs-docker-image-repo">Mkdocs docker image repo<a class="headerlink" href="#mkdocs-docker-image-repo" title="Permanent link">&para;</a></h2>
+<h3 id="how-to-use-it">How to use it<a class="headerlink" href="#how-to-use-it" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Docker</label><label for="__tabbed_3_2">Local install (pip)</label><label for="__tabbed_3_3">Local install (poetry)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h4 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Build the image</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>build
+</code></pre></div>
+</li>
+<li>
+<p>Start the container</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up
+</code></pre></div>
+</li>
+<li>
+<p>Open a browser to <code>http://localhost:8001/</code> to see the documentation locally</p>
+</li>
+<li>
+<p>Modify the files in the docs directory. The site will auto update when the files are saved.</p>
+</li>
+<li>
+<p>Quit</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> to quit the local server and stop the container</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<h4 id="local-install-pip">Local Install (pip)<a class="headerlink" href="#local-install-pip" title="Permanent link">&para;</a></h4>
+<p>python should be version 3</p>
+<ol>
+<li>
+<p>Install mkdocs</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+</li>
+<li>
+<p>Start the local server</p>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </span>localhost:8001
+</code></pre></div>
+</li>
+<li>
+<p>Open a browser to <code>http://localhost:8001/</code> to see the documentation locally</p>
+</li>
+<li>
+<p>Modify the files in the docs directory. The site will auto update when the files are saved.</p>
+</li>
+<li>
+<p>Quit</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> to quit mkdocs</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<h4 id="local-install-poetry">Local Install (poetry)<a class="headerlink" href="#local-install-poetry" title="Permanent link">&para;</a></h4>
+<p>python poetry must be installed in the local system</p>
+<ol>
+<li>
+<p>Install mkdocs</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install
+</code></pre></div>
+</li>
+<li>
+<p>Start the local server</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>shell
+mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </span>localhost:8001
+</code></pre></div>
+</li>
+<li>
+<p>Open a browser to <code>http://localhost:8001/</code> to see the documentation locally</p>
+</li>
+<li>
+<p>Modify the files in the docs directory. The site will auto update when the files are saved.</p>
+</li>
+<li>
+<p>Quit</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> to quit mkdocs</p>
+<div class="highlight"><pre><span></span><code><span class="nb">exit</span><span class="w">  </span><span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li>to close poetry shell environment</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="info">
+<summary>How we set it up</summary>
+<h3 id="setup-from-scratch">Setup from scratch<a class="headerlink" href="#setup-from-scratch" title="Permanent link">&para;</a></h3>
+<p>Here's the recommended setup, from our experience setting it up.</p>
+<h4 id="project-directory">Project directory<a class="headerlink" href="#project-directory" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>mkdocs-notes<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$_</span>
+git<span class="w"> </span>init
+git<span class="w"> </span>commit<span class="w"> </span>—allow-empty<span class="w"> </span>-m”Initial<span class="w"> </span>commit”
+</code></pre></div>
+<h4 id="poetry-project">Poetry project<a class="headerlink" href="#poetry-project" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>init<span class="w"> </span>—name<span class="w"> </span>docs<span class="w"> </span>—description<span class="w"> </span>“Project<span class="w"> </span>Documentation”<span class="w"> </span><span class="c1"># (1)!</span>
+<span class="c1"># use a modern stable python like version 3.11.1</span>
+<span class="c1"># don’t define dependencies interactively</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m”create<span class="w"> </span>project<span class="w"> </span><span class="k">for</span><span class="w"> </span>documentation”
+</code></pre></div>
+<ol>
+<li>We chose poetry because it performs multiple useful functions such as creating the virtual environment and dependency management. It will be easy to update to the latest versions of dependencies.</li>
+</ol>
+<h4 id="mkdocs-package">Mkdocs package<a class="headerlink" href="#mkdocs-package" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>shell<span class="w"> </span><span class="c1"># this goes into the poetry virtual environment</span>
+poetry<span class="w"> </span>add<span class="w"> </span>mkdocs<span class="w"> </span>—group<span class="w"> </span>docs
+<span class="c1"># group replaces dev dependencies</span>
+git<span class="w"> </span>add<span class="w"> </span>pyproject.toml<span class="w"> </span>poetry.lock
+git<span class="w"> </span>ci<span class="w"> </span>-m”add<span class="w"> </span>mkdocs<span class="w"> </span>package”
+</code></pre></div>
+<h4 id="mkdocs-project">Mkdocs project<a class="headerlink" href="#mkdocs-project" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>new<span class="w"> </span>.<span class="w"> </span><span class="c1"># creates mkdocs project in current directory</span>
+git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="c1"># add all untracked files</span>
+git<span class="w"> </span>ci<span class="w"> </span>-m”create<span class="w"> </span>mkdocs<span class="w"> </span>project”
+</code></pre></div>
+<h4 id="local-dev-server">Local dev server<a class="headerlink" href="#local-dev-server" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve<span class="w"> </span>—dev-addr<span class="w"> </span><span class="m">0</span>.0.0.0:8001<span class="w"> </span><span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li>Start the dev server locally on any address on port 8001.
+This is useful for development from a different local network computer, where the default localhost won’t work</li>
+</ol>
+<h4 id="material-theme">Material theme<a class="headerlink" href="#material-theme" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>mkdocs-material
+cat<span class="w"> </span><span class="s2">&quot;theme: material&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>mkdocs.yml
+git<span class="w"> </span>ci<span class="w"> </span>-a<span class="w"> </span>-m<span class="s2">&quot;setup material theme for mkdocs&quot;</span>
+</code></pre></div>
+<h4 id="multirepo-not-yet-working"><del>Multirepo</del> (not yet working)<a class="headerlink" href="#multirepo-not-yet-working" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>mkdocs-multirepo-plugin
+<span class="c1"># add the plugin in mkdocs.yml</span>
+<span class="c1"># import the other repos in mkdocs.yml</span>
+</code></pre></div>
+<h4 id="export-requirements">Export requirements<a class="headerlink" href="#export-requirements" title="Permanent link">&para;</a></h4>
+<p>We need to export the requirements whenever we add a new package, so that the docker setup and pip users can know to use it.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># (1)!</span>
+poetry<span class="w"> </span><span class="nb">export</span><span class="w"> </span>-f<span class="w"> </span>requirements.txt<span class="w"> </span>--without-hashes<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt<span class="w"> </span>--with<span class="w"> </span>docs
+</code></pre></div>
+<ol>
+<li>This is also contained in a script <code>export_requirements.sh</code> in the scripts directory</li>
+</ol>
+<h4 id="deployment-to-github-pages">Deployment to Github Pages<a class="headerlink" href="#deployment-to-github-pages" title="Permanent link">&para;</a></h4>
+<p>We closely followed <a href="https://squidfunk.github.io/mkdocs-material/publishing-your-site/">this guide</a>.
+This setup creates a gh-pages branch to store the latest docs. Make the necessary configurations in the Github repo settings as necessary under Pages.</p>
+<h4 id="docker-setup">Docker setup<a class="headerlink" href="#docker-setup" title="Permanent link">&para;</a></h4>
+<p>We modified the dockerfile and docker-compose files from People Depot to install and serve mkdocs locally.
+The files are <code>docker-compose.yml</code> and <code>Dockerfile</code>.</p>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.sections"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
