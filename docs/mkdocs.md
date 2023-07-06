@@ -59,7 +59,7 @@ It creates documentation that's pleasing to read and easy to maintain.
     - [ ] ~~optimize Dockerfile~~
     - [ ] ~~[people depot] auto merge docs branch with gh-actions~~
 
-#### Components
+### Components
 
 1. Starter docs to guide the creation of new pages.
 1. Github workflow setup to auto-deploy the documentation.
@@ -73,11 +73,9 @@ It creates documentation that's pleasing to read and easy to maintain.
 
     1. Click on ++"Use this template"++
     1. "Create a new repository"
-    1. Set the relevant options
-    1.
-    ??? info
-
-        Be sure to check the "
+    1. Be sure to set these options:
+        1. Select "Public" repo type, which allows gh-pages to work for non-paying repos.
+        1. Check the "Include all branches" box, which copies the gh-pages branch which holds the generated html pages.
 
 === "Existing project"
 
@@ -98,18 +96,21 @@ It creates documentation that's pleasing to read and easy to maintain.
 
     1. docker-compose run executes a command from a new docker image container. In this case, inside the mkdocs container, execute `mkdocs new .` (note the period for the current directory).
 
-
-
 #### Working on docs locally
 
-1. Run the mkdocs server with the following command
+1. Run the mkdocs server from the container
 
     ``` bash
     docker-compose -f docker-compse.mkdocs.yml up
     ```
 
-2. Work on the docs.
-3. ++ctrl+c++ to stop the server.
+1. Open a browser to `http://localhost:8000/` to see the documentation locally
+
+1. Modify the files in the docs directory. The site will auto-update when the files are saved.
+
+1. Quit
+
+    ++ctrl+c++ to quit the local server and stop the container
 
 ### Extension
 
@@ -219,6 +220,7 @@ If your project wants to try other plugins not in the hackforla image, here's a 
     1. If port 8000 is already in use, change this to something like 8001:8000 to expose it on port 8001.
 
 ## Mkdocs docker image repo
+
 ### How to use it
 
 === "Docker"
