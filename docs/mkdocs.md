@@ -71,6 +71,14 @@ It creates documentation that's pleasing to read and easy to maintain.
 
     When we create a new project from the template, mkdocs should already be usable. The github workflow will run automatically and create a github pages site at `http://hackforla.github.io/<project name>`
 
+    1. Click on ++"Use this template"++
+    1. "Create a new repository"
+    1. Set the relevant options
+    1.
+    ??? info
+
+        Be sure to check the "
+
 === "Existing project"
 
     To add mkdocs to existing repos. You'll need to copy these files into your project
@@ -79,6 +87,18 @@ It creates documentation that's pleasing to read and easy to maintain.
     .github/workflows/ci.yml
     docker-compose.mkdocs.yml
     ```
+
+    You'll also need to create a new mkdocs project
+
+    1. Use the docker image to create the new project
+
+    ``` bash
+    docker-compose -f docker-compose.mkdocs.yml run mkdocs mkdocs new . # (1)!
+    ```
+
+    1. docker-compose run executes a command from a new docker image container. In this case, inside the mkdocs container, execute `mkdocs new .` (note the period for the current directory).
+
+
 
 #### Working on docs locally
 
